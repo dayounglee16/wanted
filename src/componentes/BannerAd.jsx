@@ -13,8 +13,6 @@ import styled from "styled-components";
 
 // 메인페이지) 배너광고
 const BannerAd = () => {
-  const bannerAd = data.bannerAdData;
-
   return (
     <Wrap>
       <Swiper
@@ -25,7 +23,7 @@ const BannerAd = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
       >
-        {bannerAd.map((bannerAdItem) => {
+        {data.bannerAdData.map((bannerAdItem) => {
           return (
             <SwiperSlide key={bannerAdItem.id} className="swiperBanner">
               <div className="banner swiper-slide swiper-slide-active">

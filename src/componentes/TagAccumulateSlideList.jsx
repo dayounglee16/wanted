@@ -12,7 +12,6 @@ import { AddCompanyItemState } from "../atom";
 
 //누적투자 100억이상 슬라이드 리스트 부분
 const TagAccumulateSlideList = () => {
-  const tagAccumulate = data.tagAccumulateData;
   const [addCompanyItem, setAddCompanyItem] =
     useRecoilState(AddCompanyItemState);
 
@@ -43,7 +42,7 @@ const TagAccumulateSlideList = () => {
           prevEl: ".swiper-button-prev",
         }}
       >
-        {tagAccumulate.map((tagAccumulateItem) => {
+        {data.tagAccumulateData.map((tagAccumulateItem) => {
           return (
             <SwiperSlide key={tagAccumulateItem.id}>
               <TagBox>

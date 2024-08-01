@@ -4,8 +4,6 @@ import JopPostingBookMarkIcon from "./JobPostingBookMarkIcon";
 
 //서브 페이지) 채용공고 페이지 회사 리스트
 const JobPostingPage = () => {
-  const companyList = data.companyData;
-
   return (
     <Wrap>
       <div>
@@ -14,7 +12,7 @@ const JobPostingPage = () => {
           <button>ℹ️ 상품안내</button>
         </div>
         <div className="companyBox">
-          {companyList.map((companyItem) => (
+          {data.companyData.map((companyItem) => (
             <div className="companyList" key={companyItem.id}>
               <div className="companyImg">
                 <div className="companyBookMark">

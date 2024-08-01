@@ -3,7 +3,7 @@ import styled from "styled-components";
 const PositionRecommendation = () => {
   return (
     <Wrap>
-      <div className="parson">parson</div>
+      <div className="parson">로봇 이미지</div>
       <div className="inner">
         <p>
           내 이력서를 분석해 <br />

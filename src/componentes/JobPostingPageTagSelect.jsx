@@ -3,8 +3,6 @@ import { data } from "../data";
 
 // 서브 페이지) 채용공고 페이지 상단 태그부분
 const JobPostingPageTagSelect = () => {
-  const tagName = data.tagNameData;
-
   return (
     <Wrap>
       <div className="inner">
@@ -41,7 +39,7 @@ const JobPostingPageTagSelect = () => {
               </select>
             </DropDown>
             <TagList>
-              {tagName.map((tagItem) => (
+              {data.tagNameData.map((tagItem) => (
                 <button key={tagItem.id}>{tagItem.tagName}</button>
               ))}
             </TagList>

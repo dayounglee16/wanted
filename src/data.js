@@ -30,6 +30,7 @@ export const data = {
     {
       id: 1,
       title: "채용공고",
+      url: "/shortcutItem",
     },
     {
       id: 2,

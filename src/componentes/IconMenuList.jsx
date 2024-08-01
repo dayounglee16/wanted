@@ -4,18 +4,23 @@ import { useNavigate } from "react-router-dom";
 
 //메인 페이지) 아이콘 메뉴
 const IconMenuList = () => {
-  const iconMenu = data.iconMenuData;
-
   const navigate = useNavigate();
 
   return (
     <Wrap>
-      {iconMenu.map((icon) => (
-        <IconBox key={icon.id} onClick={() => navigate("/shortcutItem")}>
-          <li className="iconImg">icon</li>
-          <li className="iconTxt">{icon.title}</li>
-        </IconBox>
-      ))}
+      {data.iconMenuData.map((icon) => {
+        return (
+          <IconBox
+            key={icon.id}
+            onClick={() =>
+              navigate(icon.url === "/shortcutItem" ? "/shortcutItem" : null)
+            }
+          >
+            <li className="iconImg">icon</li>
+            <li className="iconTxt">{icon.title}</li>
+          </IconBox>
+        );
+      })}
     </Wrap>
   );
 };

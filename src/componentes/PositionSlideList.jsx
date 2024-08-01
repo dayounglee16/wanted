@@ -11,8 +11,6 @@ import "swiper/css/pagination";
 
 //내가 관심 있을 만한 포지션 슬라이드 리스트 부분
 const PositionSlideList = () => {
-  const positionDataList = data.positionData;
-
   return (
     <Wrap>
       <Swiper
@@ -24,7 +22,7 @@ const PositionSlideList = () => {
           prevEl: ".swiper-button-prev",
         }}
       >
-        {positionDataList.map((positionItem) => {
+        {data.positionData.map((positionItem) => {
           return (
             <SwiperSlide key={positionItem.id}>
               <div className="positionList">
