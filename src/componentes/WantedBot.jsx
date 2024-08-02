@@ -1,42 +1,63 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment as faSolidComment } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown as faSolidChevronDown } from "@fortawesome/free-solid-svg-icons";
+<FontAwesomeIcon icon="fa-solid fa-chevron-down" />;
 
 // 메인 페이지) 원티드봇 채팅
 const WantedBot = () => {
+  const [wantedBotShow, setWantedBotShow] = useState(false);
+
   return (
     <Wrap>
-      <div className="show">
-        <h1>❔</h1>
+      <div className="show" onClick={() => setWantedBotShow(!wantedBotShow)}>
+        <h1>
+          <FontAwesomeIcon
+            className="buttons"
+            icon={wantedBotShow === true ? faSolidChevronDown : faSolidComment}
+            size="xl"
+          />
+        </h1>
       </div>
-      <ModalBox>
-        <Title>
-          <h2>원티드 BOT</h2>
-          <button>🔽</button>
-        </Title>
-        <div className="time">
-          <span>오후 10:46</span>
-        </div>
-        <Chatting>
-          <div className="botImg"></div>
-          <div className="message">
-            <div>
-              <h4>원티드 봇</h4>
-              <p>
-                안녕하세요 원티드 Bot입니다.
-                <br />
-                <br />본 챗봇은 실제 상담원 채팅 서비스를 제공하지 않습니다.
-              </p>
-              <p>
-                남겨진 메세지는 전달되지 않습니다. <br />
-                <br />
-                아래 버튼 중 도움이 필요한 버튼을 선택해 주세요.
-                <button>고객센터 바로가기</button>
-                <button>건의사항</button>
-              </p>
-              <span>오후 10:46</span>
-            </div>
+      {wantedBotShow && (
+        <ModalBox>
+          <Title>
+            <h2>원티드 BOT</h2>
+            <button onClick={() => setWantedBotShow(false)}>
+              <FontAwesomeIcon
+                className="buttons"
+                icon={faSolidChevronDown}
+                size="xl"
+              />
+            </button>
+          </Title>
+          <div className="time">
+            <span>오후 10:46</span>
           </div>
-        </Chatting>
-      </ModalBox>
+          <Chatting>
+            <div className="botImg"></div>
+            <div className="message">
+              <div>
+                <h4>원티드 봇</h4>
+                <p>
+                  안녕하세요 원티드 Bot입니다.
+                  <br />
+                  <br />본 챗봇은 실제 상담원 채팅 서비스를 제공하지 않습니다.
+                </p>
+                <p>
+                  남겨진 메세지는 전달되지 않습니다. <br />
+                  <br />
+                  아래 버튼 중 도움이 필요한 버튼을 선택해 주세요.
+                  <button>고객센터 바로가기</button>
+                  <button>건의사항</button>
+                </p>
+                <span>오후 10:46</span>
+              </div>
+            </div>
+          </Chatting>
+        </ModalBox>
+      )}
     </Wrap>
   );
 };
@@ -49,10 +70,10 @@ const Wrap = styled.div`
     position: fixed;
     right: 2%;
     bottom: 3%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding-bottom: 5px;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: #000;
     font-size: 14px;
     display: flex;
@@ -61,6 +82,12 @@ const Wrap = styled.div`
     cursor: pointer;
     z-index: 10;
   }
+
+  h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+  }
 `;
 
 const Title = styled.div`
@@ -68,12 +95,13 @@ const Title = styled.div`
   justify-content: space-between;
   background-color: #000;
   color: #fff;
-  padding: 15px;
+  padding: 15px 20px;
   border-radius: 10px 10px 0 0;
 
   button {
     background-color: #000;
-    font-size: 20px;
+    font-size: 14px;
+    color: #fff;
   }
 `;
 
@@ -85,7 +113,7 @@ const ModalBox = styled.div`
   border: none;
   position: fixed;
   right: 20px;
-  bottom: 10%;
+  bottom: 11%;
   border-radius: 10px;
 
   &::backdrop {

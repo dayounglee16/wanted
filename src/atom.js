@@ -21,6 +21,6 @@ export const CompanyCountState = atom({
 });
 
 export const SearchModalState = atom({
-  key: "searchModal",
+  key: "isSearchModal",
   default: false,
 });
