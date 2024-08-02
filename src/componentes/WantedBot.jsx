@@ -1,19 +1,16 @@
 import styled from "styled-components";
-import { useRef } from "react";
 
 // 메인 페이지) 원티드봇 채팅
 const WantedBot = () => {
-  const modalRef = useRef();
-
   return (
     <Wrap>
       <div className="show">
-        <h1 onClick={() => modalRef.current.showModal()}>❔</h1>
+        <h1>❔</h1>
       </div>
-      <ModalBox ref={modalRef} onClick={() => modalRef.current.close()}>
+      <ModalBox>
         <Title>
           <h2>원티드 BOT</h2>
-          <button onClick={() => modalRef.current.close()}>🔽</button>
+          <button>🔽</button>
         </Title>
         <div className="time">
           <span>오후 10:46</span>
@@ -62,7 +59,7 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 50;
+    z-index: 10;
   }
 `;
 
@@ -72,6 +69,7 @@ const Title = styled.div`
   background-color: #000;
   color: #fff;
   padding: 15px;
+  border-radius: 10px 10px 0 0;
 
   button {
     background-color: #000;
@@ -79,15 +77,15 @@ const Title = styled.div`
   }
 `;
 
-const ModalBox = styled.dialog`
+const ModalBox = styled.div`
   width: 380px;
-  height: 600px;
+  height: 700px;
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   border: none;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 10%;
   border-radius: 10px;
 
   &::backdrop {

@@ -26,6 +26,41 @@ export const data = {
     },
   ],
 
+  searchWordData: [
+    {
+      id: 1,
+      searchItem: "qa",
+    },
+    {
+      id: 2,
+      searchItem: "데이터",
+    },
+    {
+      id: 3,
+      searchItem: "flutter",
+    },
+    {
+      id: 4,
+      searchItem: "프론트엔드",
+    },
+    {
+      id: 5,
+      searchItem: "ios",
+    },
+    {
+      id: 6,
+      searchItem: "서비스기획",
+    },
+    {
+      id: 7,
+      searchItem: "백엔드",
+    },
+    {
+      id: 8,
+      searchItem: "총무",
+    },
+  ],
+
   iconMenuData: [
     {
       id: 1,

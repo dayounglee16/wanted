@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import NavbarMenuList from "./NavbarMenuList";
 import { useNavigate } from "react-router-dom";
+import SearchModal from "./SearchModal";
+import { useRecoilState } from "recoil";
+import { SearchModalState } from "../atom";
 
 //메인 페이지) Navbar 전체부분
 const Navbar = () => {
   const navigate = useNavigate();
+  const [searchModal, setSearchModal] = useRecoilState(SearchModalState);
 
   return (
     <Wrap>
@@ -36,9 +40,11 @@ const Navbar = () => {
             <NavbarMenuList />
           </ul>
         </NavLeft>
+        {searchModal && <SearchModal />}
+
         <NavRight>
           <ul>
-            <li>검색</li>
+            <li onClick={() => setSearchModal(true)}>검색</li>
             <li>알림</li>
             <li onClick={() => navigate("/profile")}>프로필</li>
             <li>
@@ -93,7 +99,8 @@ const Wrap = styled.div`
   }
 
   .inner {
-    padding: 0 260px;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     line-height: 60px;
