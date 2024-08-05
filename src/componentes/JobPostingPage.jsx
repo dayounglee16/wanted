@@ -59,15 +59,15 @@ const Wrap = styled.div`
     gap: 19px;
 
     .companyList {
-      width: 264px;
-      height: 280px;
+      width: 100%;
+      max-width: 18.9%;
       display: flex;
       flex-direction: column;
       gap: 10px;
 
       .companyImg {
         border-radius: 10px;
-        height: 180px;
+        aspect-ratio: 3/2;
         background-color: #999;
         cursor: pointer;
 

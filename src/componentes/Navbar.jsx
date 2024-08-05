@@ -36,6 +36,7 @@ const Navbar = () => {
   );
 };
 
+//z-index 사용 10 ~
 const Wrap = styled.div`
   width: 100%;
   height: 60px;
@@ -45,6 +46,7 @@ const Wrap = styled.div`
   z-index: 10;
 
   .inner {
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;

@@ -55,7 +55,8 @@ const Wrap = styled.div`
   gap: 10px;
 
   .bookMarkBox {
-    width: 24%;
+    width: 100%;
+    max-width: 24%;
     cursor: pointer;
     margin-top: 10px;
   }
@@ -79,8 +80,7 @@ const Wrap = styled.div`
 `;
 
 const Image = styled.div`
-  width: 250px;
-  height: 185px;
+  aspect-ratio: 3/2;
   border-radius: 5px;
   background-color: #999;
   padding: 15px;

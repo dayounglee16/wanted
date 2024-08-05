@@ -9,8 +9,8 @@ const InstrastPosition = () => {
         <h2>내가 관심 있을 만한 포지션</h2>
         <div className="allListBtn">
           <b>전체보기</b>
-          <span className="prev .swiper-button-prev">&lt;</span>
-          <span className="next .swiper-button-next">&gt;</span>
+          <span className="positionPrev swiper-button-prev"></span>
+          <span className="positionNext swiper-button-next"></span>
         </div>
       </MyPosition>
       <div>
@@ -23,6 +23,7 @@ const InstrastPosition = () => {
 export default InstrastPosition;
 
 const PositionTitle = styled.div`
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -34,31 +35,42 @@ const MyPosition = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 0;
 
   .allListBtn > b {
-    margin-right: 20px;
+    margin-right: 70px;
   }
 
-  .allListBtn > .prev {
-    padding: 3px 8px;
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: auto !important;
+    right: 35px !important;
+    color: #333;
+  }
+
+  .allListBtn > .positionPrev:after {
+    padding: 5px 8px;
     border: 1px solid #ccc;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px 0 0 5px;
     border-right: none;
+    font-size: 12px;
 
     &:hover {
       background-color: #eee;
     }
   }
 
-  .allListBtn > .next {
-    padding: 3px 8px;
+  .allListBtn > .positionNext:after {
+    padding: 5px 8px;
     border: 1px solid #ccc;
     color: #333;
     font-weight: bold;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+    font-size: 12px;
 
     &:hover {
       background-color: #eee;

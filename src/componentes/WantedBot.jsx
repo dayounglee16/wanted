@@ -56,6 +56,10 @@ const WantedBot = () => {
               </div>
             </div>
           </Chatting>
+          <div className="chatInputBox">
+            <input type="text" placeholder="메시지 입력" />
+            <span>Zendesk로 구축</span>
+          </div>
         </ModalBox>
       )}
     </Wrap>
@@ -63,6 +67,7 @@ const WantedBot = () => {
 };
 export default WantedBot;
 
+// z-index사용 10 ~
 const Wrap = styled.div`
   position: relative;
 
@@ -115,6 +120,7 @@ const ModalBox = styled.div`
   right: 20px;
   bottom: 11%;
   border-radius: 10px;
+  z-index: 50;
 
   &::backdrop {
     opacity: 0;
@@ -127,6 +133,26 @@ const ModalBox = styled.div`
     font-size: 12px;
     margin-top: 10px;
     color: #666;
+  }
+
+  .chatInputBox {
+    height: 230px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: 1px solid #666;
+
+      &:focus {
+        outline: 2px solid blue;
+      }
+    }
   }
 `;
 
@@ -141,7 +167,7 @@ const Chatting = styled.div`
 
   .botImg {
     background-color: #333;
-    width: 60px;
+    width: 45px;
     height: 35px;
     align-self: flex-end;
     margin-bottom: 30px;
@@ -157,14 +183,21 @@ const Chatting = styled.div`
       margin-bottom: 10px;
       border-radius: 10px;
       background-color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       button {
-        width: 100%;
+        width: 90%;
         padding: 10px;
-        border-radius: 20px;
+        border-radius: 30px;
         margin-top: 10px;
-        background-color: #079eefc0;
+        background-color: rgb(61, 93, 239);
         color: #fff;
+
+        &:hover {
+          background-color: rgb(17, 56, 230);
+        }
       }
     }
   }

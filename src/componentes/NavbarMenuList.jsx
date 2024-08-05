@@ -49,6 +49,7 @@ const NavbarMenuList = () => {
 
 export default NavbarMenuList;
 
+//z-index사용 50~
 const MenuItem = styled.li`
   cursor: pointer;
 `;
@@ -56,6 +57,7 @@ const MenuItem = styled.li`
 const MenuSlide = styled.div`
   display: flex;
   width: 100%;
+  margin: 0 auto;
   height: 400px;
   padding: 20px 380px;
   background-color: #fff;
@@ -63,7 +65,7 @@ const MenuSlide = styled.div`
   top: 60px;
   left: 0;
   transition: top 0.5s ease;
-  z-index: 0;
+  z-index: 50;
 
   .category {
     width: 20%;
@@ -75,7 +77,6 @@ const MenuSlide = styled.div`
   }
   .categoryItem {
     width: 80%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -30,17 +30,15 @@ export default IconMenuList;
 const Wrap = styled.div`
   width: 100%;
   display: flex;
-  margin: 90px 0 40px 0;
+  margin: 130px 0 80px 0;
 `;
 
 const IconBox = styled.div`
-  width: 117.7%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 10px;
-  padding: 40px 0;
 
   .iconImg {
     background-color: #999;

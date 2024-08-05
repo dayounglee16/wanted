@@ -58,6 +58,7 @@ const Wrap = styled.div`
 
   .companyBox {
     width: 49%;
+    aspect-ratio: 3/1;
     margin-bottom: 20px;
     cursor: pointer;
   }

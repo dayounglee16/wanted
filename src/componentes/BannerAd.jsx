@@ -42,9 +42,13 @@ export default BannerAd;
 
 const Wrap = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .banner {
     width: 100%;
-    height: 210px;
+    max-width: 1060px;
+    margin: 0 auto;
     margin-top: 72px;
     padding: 20px;
     display: flex;

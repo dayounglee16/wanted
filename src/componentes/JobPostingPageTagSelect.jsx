@@ -59,7 +59,8 @@ const Wrap = styled.div`
   left: 0;
   background-color: rgba(255, 255, 255);
   .inner {
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
   }
 

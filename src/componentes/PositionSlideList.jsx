@@ -18,16 +18,16 @@ const PositionSlideList = () => {
         spaceBetween={20}
         slidesPerView={4}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".positionNext",
+          prevEl: ".positionPrev",
         }}
       >
-        {data.positionData.map((positionItem) => {
+        {data.positionData.map((positionItem, i) => {
           return (
             <SwiperSlide key={positionItem.id}>
               <div className="positionList">
                 <div className="officeImg">
-                  <PositionBookMark positionItem={positionItem} />
+                  <PositionBookMark positionItem={positionItem} i={i} />
                 </div>
                 <h3>{positionItem.title}</h3>
                 <p className="subTitle">{positionItem.subTitle}</p>
@@ -54,8 +54,8 @@ const Wrap = styled.div`
   }
 
   .officeImg {
-    width: 250px;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 3/2;
     border-radius: 10px;
     background-color: #666;
   }

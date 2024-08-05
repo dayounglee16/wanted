@@ -38,8 +38,8 @@ const TagAccumulateSlideList = () => {
         spaceBetween={10}
         slidesPerView={3}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".accumulateNext",
+          prevEl: ".accumulatePrev",
         }}
       >
         {data.tagAccumulateData.map((tagAccumulateItem) => {
@@ -85,18 +85,20 @@ const TagAccumulateSlideList = () => {
 export default TagAccumulateSlideList;
 
 const Wrap = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
 `;
 
 const TagBox = styled.div`
-  width: 345px;
+  width: 100%;
+  aspect-ratio: 5/3;
   background-color: #999;
   border-radius: 10px;
 `;
 
 const TxtAligin = styled.div`
-  height: 210px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -104,7 +106,6 @@ const TxtAligin = styled.div`
 `;
 
 const TxtLeft = styled.div`
-  height: 50px;
   line-height: 25px;
   display: flex;
   align-items: center;

@@ -23,7 +23,8 @@ const Wrap = styled.div`
   padding-top: 110px;
 
   .inner {
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
   }
 `;

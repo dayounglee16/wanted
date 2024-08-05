@@ -22,7 +22,8 @@ const Wrap = styled.div`
   padding: 100px 0;
 
   .inner {
-    width: 1034px;
+    width: 100%;
+    max-width: 1034px;
     margin: 0 auto;
 
     h2 {

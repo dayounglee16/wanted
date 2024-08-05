@@ -48,13 +48,14 @@ const Home = () => {
 export default Home;
 
 const Wrap = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 
   .inner {
-    width: 1060px;
+    width: 100%;
+    max-width: 1060px;
     margin: 0 auto;
-    overflow: hidden;
   }
 `;

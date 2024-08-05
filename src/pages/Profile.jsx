@@ -61,8 +61,8 @@ const Wrap = styled.div`
   padding-top: 100px;
 
   .inner {
-    width: 900px;
-    height: 300px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
