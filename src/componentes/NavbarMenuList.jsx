@@ -59,7 +59,7 @@ const MenuSlide = styled.div`
   width: 100%;
   margin: 0 auto;
   height: 400px;
-  padding: 20px 380px;
+  padding: 10px 19.7%;
   background-color: #fff;
   position: absolute;
   top: 60px;
@@ -74,6 +74,7 @@ const MenuSlide = styled.div`
     gap: 0;
     overflow-y: scroll;
     cursor: pointer;
+    font-size: 12px;
   }
   .categoryItem {
     width: 80%;

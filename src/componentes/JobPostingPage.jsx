@@ -12,21 +12,23 @@ const JobPostingPage = () => {
           <button>ℹ️ 상품안내</button>
         </div>
         <div className="companyBox">
-          {data.companyData.map((companyItem) => (
-            <div className="companyList" key={companyItem.id}>
-              <div className="companyImg">
-                <div className="companyBookMark">
-                  <span>합격보상금 100만원</span>
-                  <JopPostingBookMarkIcon companyItem={companyItem} />
+          {data.companyData
+            .filter((companyItem) => !companyItem.subTitle)
+            .map((companyItem) => (
+              <div className="companyList" key={companyItem.id}>
+                <div className="companyImg">
+                  <div className="companyBookMark">
+                    <span>합격보상금 100만원</span>
+                    <JopPostingBookMarkIcon companyItem={companyItem} />
+                  </div>
+                </div>
+                <div className="companyTxt">
+                  <span className="title">{companyItem.title}</span>
+                  <span className="position">{companyItem.position}</span>
+                  <span className="location">{companyItem.location}</span>
                 </div>
               </div>
-              <div className="companyTxt">
-                <span className="title">{companyItem.title}</span>
-                <span className="position">{companyItem.position}</span>
-                <span className="location">{companyItem.location}</span>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </Wrap>

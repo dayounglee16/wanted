@@ -19,14 +19,18 @@ const Footer = () => {
           </ul>
         </div>
 
-        <p>
-          (주)원티드랩대표이사 이복기 <br />
-          서울특별시 송파구 올림픽로 300, 롯데월드타워 35층전화번호: 02-539-7118
-          <br />
-          사업자등록번호: 299-86-00021통신판매번호:
-          2020-서울송파-3147유료직업소개사업등록번호: (국내)
-          제2020-3230259-14-5-00018호
-        </p>
+        <div className="location">
+          <p>(주)원티드랩대표이사 이복기</p>
+          <p>
+            서울특별시 송파구 올림픽로 300, 롯데월드타워 35층전화번호:
+            02-539-7118
+          </p>
+          <p>
+            사업자등록번호: 299-86-00021통신판매번호:
+            2020-서울송파-3147유료직업소개사업등록번호: (국내)
+            제2020-3230259-14-5-00018호
+          </p>
+        </div>
         <ul className="qna">
           <li>채용서비스 문의</li>
           <li>원티드스페이스 문의</li>
@@ -62,7 +66,8 @@ const Wrap = styled.div`
   border-top: 1px solid#eee;
 
   .inner {
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     padding: 30px 0 20px 0;
     font-size: 12px;
     font-weight: bold;
@@ -83,17 +88,21 @@ const Wrap = styled.div`
       }
     }
 
-    p {
+    .location {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       margin: 30px 0;
-      line-height: 24px;
       color: #999;
     }
+
     .qna {
       display: flex;
       margin-bottom: 30px;
       color: #777;
       gap: 15px;
     }
+
     .snsBox {
       display: flex;
       justify-content: space-between;

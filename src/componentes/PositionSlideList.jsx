@@ -22,19 +22,21 @@ const PositionSlideList = () => {
           prevEl: ".positionPrev",
         }}
       >
-        {data.positionData.map((positionItem, i) => {
-          return (
-            <SwiperSlide key={positionItem.id}>
-              <div className="positionList">
-                <div className="officeImg">
-                  <PositionBookMark positionItem={positionItem} i={i} />
+        {data.companyData
+          .filter((positionItem) => positionItem.subTitle)
+          .map((positionItem, i) => {
+            return (
+              <SwiperSlide key={positionItem.id}>
+                <div className="positionList">
+                  <div className="officeImg">
+                    <PositionBookMark positionItem={positionItem} i={i} />
+                  </div>
+                  <h3>{positionItem.title}</h3>
+                  <p className="subTitle">{positionItem.subTitle}</p>
                 </div>
-                <h3>{positionItem.title}</h3>
-                <p className="subTitle">{positionItem.subTitle}</p>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </Wrap>
   );

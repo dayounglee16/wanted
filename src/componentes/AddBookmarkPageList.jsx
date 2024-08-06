@@ -19,8 +19,8 @@ const AddBookmarkPageList = () => {
   return (
     <Wrap>
       {addBookMarkItem.length !== 0 ? (
-        addBookMarkItem.map((bookMarkItem) => (
-          <div key={bookMarkItem.id} className="bookMarkBox">
+        addBookMarkItem.map((bookMarkItem, i) => (
+          <div key={i} className="bookMarkBox">
             <Image>
               <FontAwesomeIcon
                 className="buttons"
@@ -31,6 +31,7 @@ const AddBookmarkPageList = () => {
             </Image>
             <div className="bookMarkTitle">
               <h3>{bookMarkItem.title}</h3>
+              <h5>{bookMarkItem.subTitle}</h5>
               <h5>{bookMarkItem.position}</h5>
               <h5 className="country">{bookMarkItem.country}</h5>
               <h5>{bookMarkItem.location}</h5>
